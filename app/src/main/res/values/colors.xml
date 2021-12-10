@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_200">#FFFF6C6A</color>
+    <color name="red_500">#FFF5313F</color>
+    <color name="red_700">#FFBA0018</color>
+    <color name="green_200">#FF8BF497</color>
+    <color name="green_700">#FF1B903B</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#6D6E9C</color>
+    <color name="light_grey">#DADAE5</color>
+    <color name="chip_background">#DEF3E1</color>
+    <color name="chip_text">#57C168</color>
+    <color name="card_background">#CCFFFFFF</color>
+    <color name="green_light">#57C168</color>
+    <color name="green_secondary">#3355C369</color>
+    <color name="off_white">#EFEFEF</color>
+</resources>
