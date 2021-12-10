@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sizeSelectionFragment">
+
+    <fragment
+        android:id="@+id/sizeSelectionFragment"
+        android:name="me.mufaddal.unclejohnpizzas.ui.SizeSelectionFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_sizeSelectionFragment_to_crustSelectionFragment"
+            app:destination="@id/crustSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/crustSelectionFragment"
+        android:name="me.mufaddal.unclejohnpizzas.ui.CrustSelectionFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_crustSelectionFragment_to_toppingSelectionFragment"
+            app:destination="@id/toppingSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toppingSelectionFragment"
+        android:name="me.mufaddal.unclejohnpizzas.ui.ToppingSelectionFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_toppingSelectionFragment_to_itemDetailsFragment"
+            app:destination="@id/itemDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemDetailsFragment"
+        android:name="me.mufaddal.unclejohnpizzas.ui.OrderDetailFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_itemDetailsFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="me.mufaddal.unclejohnpizzas.ui.CheckoutFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_checkoutFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="me.mufaddal.unclejohnpizzas.ui.OrderTrackingFragment"
+        android:label="" />
+</navigation>
