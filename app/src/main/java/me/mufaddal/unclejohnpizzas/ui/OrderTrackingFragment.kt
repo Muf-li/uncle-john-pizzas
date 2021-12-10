@@ -44,15 +44,4 @@ class OrderTrackingFragment : Fragment() {
         mAdapter = TimeLineAdapter(mDataList)
         recyclerView.adapter = mAdapter
     }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @return A new instance of fragment OrderDetailsFragment.
-         */
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) = OrderTrackingFragment()
-    }
 }

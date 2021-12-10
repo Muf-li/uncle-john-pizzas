@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.github.vipulasri.timelineview.TimelineView
 import me.mufaddal.unclejohnpizzas.R
+import me.mufaddal.unclejohnpizzas.data.models.OrderStatus
 import me.mufaddal.unclejohnpizzas.data.models.TimeLineModel
 import me.mufaddal.unclejohnpizzas.utils.VectorDrawableUtils
 
@@ -19,11 +20,9 @@ class TimeLineAdapter(private val mFeedList: List<TimeLineModel>) : RecyclerView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TimeLineViewHolder {
-
         if(!::mLayoutInflater.isInitialized) {
             mLayoutInflater = LayoutInflater.from(parent.context)
         }
-
         return TimeLineViewHolder(mLayoutInflater.inflate(R.layout.item_timeline, parent, false), viewType)
     }
 
@@ -34,18 +33,11 @@ class TimeLineAdapter(private val mFeedList: List<TimeLineModel>) : RecyclerView
         val imgRes = holder.itemView.context.resources.getIdentifier(uri, null, holder.itemView.context.packageName)
         holder.timeline.marker = VectorDrawableUtils.getDrawable(holder.itemView.context, imgRes)
 
-//        setMarker(holder, R.drawable.ic_marker_inactive, R.color.green_700)
-//        when {
-//            timeLineModel.status == OrderStatus.INACTIVE -> {
-//                setMarker(holder, R.drawable.ic_marker_inactive, R.color.green_700)
-//            }
-//            timeLineModel.status == OrderStatus.ACTIVE -> {
-//                setMarker(holder, R.drawable.ic_marker_active, R.color.green_700)
-//            }
-//            else -> {
-//                setMarker(holder, R.drawable.ic_marker, R.color.green_700)
-//            }
-//        }
+        if(timeLineModel.status == OrderStatus.COMPLETED
+            || timeLineModel.status == OrderStatus.ACTIVE){
+            holder.timeline.setStartLineColor(R.color.red_500, getItemViewType(position))
+            holder.timeline.setEndLineColor(R.color.red_500, getItemViewType(position))
+        }
 
         if (timeLineModel.date.isNotEmpty()) {
             holder.date.visibility = View.VISIBLE
@@ -55,10 +47,6 @@ class TimeLineAdapter(private val mFeedList: List<TimeLineModel>) : RecyclerView
         }
 
         holder.message.text = timeLineModel.message
-    }
-
-    private fun setMarker(holder: TimeLineViewHolder, drawableResId: Int, colorFilter: Int) {
-
     }
 
     override fun getItemCount() = mFeedList.size

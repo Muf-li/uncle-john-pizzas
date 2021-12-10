@@ -9,10 +9,12 @@
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/drawable/bg_top_gradient.xml" value="0.19583333333333333" />
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/drawable/ic_cashback.xml" value="0.18981481481481483" />
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/drawable/ic_checked.xml" value="0.1814814814814815" />
+        <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/drawable/ic_confirmed.xml" value="0.18703703703703703" />
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/drawable/ic_edit.xml" value="0.19583333333333333" />
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/drawable/ic_marker.xml" value="0.18703703703703703" />
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/drawable/ic_marker_active.xml" value="0.18703703703703703" />
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/drawable/ic_marker_inactive.xml" value="0.18703703703703703" />
+        <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/drawable/ic_preparing.xml" value="0.18703703703703703" />
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/layout/activity_main.xml" value="0.16757246376811594" />
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/layout/fragment_checkout.xml" value="0.1796875" />
         <entry key="..\:/Projects/uncle-john-pizzas/app/src/main/res/layout/fragment_crust_selection.xml" value="0.1796875" />
