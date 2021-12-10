@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@drawable/bg_top_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_create_your_pizza"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_size_crust_toppings"
+                android:textColor="#4DFFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/placeholder_price_12"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="216dp"
+        app:layout_constraintGuide_percent="0.40"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20"/>
+
+    <RelativeLayout
+        android:id="@+id/rlImgContainer"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/outer_circle"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/cd_outer_circle"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:src="@drawable/inner_circle"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/cd_inner_circle"/>
+
+        <ImageView
+            android:id="@+id/imgPizza"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="32dp"
+            android:src="@drawable/placeholder_pizza"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/cd_pizza_image"/>
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rlImgContainer"
+        app:cardUseCompatPadding="true"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvCardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_choose_your_crust"
+                android:textSize="16sp"
+                android:textColor="@color/purple"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgCrusts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleLine="true"
+                app:singleSelection="true"
+                app:chipSpacingHorizontal="32dp"
+                app:selectionRequired="true"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <android.widget.Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_next"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
